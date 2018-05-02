@@ -88,7 +88,7 @@
         },
         "autoShutdownStatus": {
             "type": "string",
-            "defaultValue": "Enabled",
+            "defaultValue": "Disabled",
             "allowedValues": [
                 "Enabled",
                 "Disabled"
@@ -148,6 +148,7 @@
             ],
             "properties": {
                 "osProfile": {
+                    "licenseType": "Windows_Server",
                     "computerName": "[parameters('virtualMachineName')]",
                     "adminUsername": "[variables('adminUsername')]",
                     "adminPassword": "[parameters('adminPassword')]",

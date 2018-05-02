@@ -21,7 +21,7 @@ param (
 $defaultLocalPath = "C:\AzureStackOnAzureVM"
 $gitbranchconfig = Import-Csv -Path $defaultLocalPath\config.ind -Delimiter ","
 $gitbranchcode = $gitbranchconfig.branch.Trim()
-$gitbranch = "https://raw.githubusercontent.com/yagmurs/AzureStack-VM-PoC/$gitbranchcode"
+$gitbranch = "https://raw.githubusercontent.com/ahpeng/AzureStack-VM-PoC/$gitbranchcode"
 
 if (Test-Path "$defaultLocalPath\ASDKHelperModule.psm1")
 {
