@@ -87,7 +87,7 @@ if ($interactive -eq $true)
     do {
     $AadAdminUser = Read-Host -Prompt "`nMake sure the user has Global Administrator Permission on Azure Active Directory`nThe username format must be as follows:`n`n<Tenant Admin>@<Tenant name>.onmicrosoft.com`n`nEnter Azure AD user"
 
-    } until ($AadAdminUser -match "(^[A-Z0-9._-]{1,64})@([A-Z0-9]{1,27}\.)onmicrosoft\.com$")
+    } until ($AadAdminUser -match "(^[A-Z0-9._-]{1,64})@([A-Z0-9]{1,27}\.)partner\.onmschina\.cn$")
 
     do {
     $AadPassword = Read-Host -Prompt "Enter password for $AadAdminUser" -AsSecureString
@@ -295,6 +295,7 @@ Write-Log @writeLogParams -Message "Time server is now $timeServer"
 
 $InstallAzSPOCParams = @{
     AdminPassword = $localAdminPass
+    InfraAzureEnvironment = "AzureChinaCloud"
     InfraAzureDirectoryTenantAdminCredential = $aadcred 
     InfraAzureDirectoryTenantName = $aadTenant
     NATIPv4Subnet = "192.168.137.0/28"
