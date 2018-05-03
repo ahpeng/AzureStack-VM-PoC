@@ -17,7 +17,8 @@ https://github.com/yagmurs/AzureStack-VM-PoC
   - 运行桌面上的Install-ASDK.ps1
 
 修改的部分包括：
-  - 设置AAD账户为username@tenantname.partner.onmschina格式，并修改Azure Stack的部署脚本参数，以支持AzureChinaCloud
+  - 设置AAD账户为username@tenantname.partner.onmschina.cn格式
+  - 修改Azure Stack的部署脚本参数，以支持AzureChinaCloud
   - 支持Windows Server的BYOL，以降低运行成本
 
 可以参考Yagmurs的博客文章：<br>
