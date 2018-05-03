@@ -1,6 +1,5 @@
 方便在Azure Global上创建Azure Stack ASDK POC环境。<br>
 参考了Yagmurs的模板，并做少量修改，以便支持用Azure Mooncake AAD部署ASDK：<br>
-
 https://github.com/yagmurs/AzureStack-VM-PoC
 
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fahpeng%2FAzureStack-VM-PoC%2Fmaster%2Fazuredeploy.json" target="_blank">
@@ -11,7 +10,8 @@ https://github.com/yagmurs/AzureStack-VM-PoC
     <img src="https://raw.githubusercontent.com/shenglol/arm-visualizer/master/src/visualizebutton.png"/>
 </a>
 
-该模板可以在Azure Global上创建虚拟机，并自动配置好部署ASDK所需的准备工作。请按照以下步骤执行：
+该模板可以在Azure Global上创建虚拟机，并自动配置好部署ASDK所需的准备工作。<br>
+请按照以下步骤执行：
   - 部署模板，Azure区域不妨选择WestUS2
   - VM部署完成后，登录到Azure VM，运行"lusrmgr.msc"设置administrator密码，然后用administrator身份重新登录该VM
   - 运行桌面上的Install-ASDK.ps1
@@ -21,5 +21,4 @@ https://github.com/yagmurs/AzureStack-VM-PoC
   - 支持Windows Server的BYOL，以降低运行成本
 
 可以参考Yagmurs的博客文章：<br>
-
 https://blogs.technet.microsoft.com/yagmurs/deploying-azure-stack-development-kit-asdk-straight-on-azure-vm
