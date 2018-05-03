@@ -1,6 +1,8 @@
-方便在Azure Global上创建Azure Stack ASDK POC环境。
-参考了Yagmurs的模板，并做少量修改，以便支持用Azure Mooncake AAD部署ASDK：
+方便在Azure Global上创建Azure Stack ASDK POC环境。<br>
+参考了Yagmurs的模板，并做少量修改，以便支持用Azure Mooncake AAD部署ASDK：<br>
+
 https://github.com/yagmurs/AzureStack-VM-PoC
+
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fahpeng%2FAzureStack-VM-PoC%2Fmaster%2Fazuredeploy.json" target="_blank">
     <img src="https://azuredeploy.net/deploybutton.png"/>
 </a>
@@ -18,5 +20,6 @@ https://github.com/yagmurs/AzureStack-VM-PoC
   - 设置AAD账户为username@tenantname.partner.onmschina格式，并修改Azure Stack的部署脚本参数，以支持AzureChinaCloud
   - 支持Windows Server的BYOL，以降低运行成本
 
-可以参考Yagmurs的博客文章：
+可以参考Yagmurs的博客文章：<br>
+
 https://blogs.technet.microsoft.com/yagmurs/deploying-azure-stack-development-kit-asdk-straight-on-azure-vm
