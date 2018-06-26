@@ -1,4 +1,4 @@
-方便在Azure Global上创建Azure Stack ASDK POC环境。<br>
+方便在Azure Mooncake上创建Azure Stack ASDK POC环境。<br>
 参考了Yagmurs的模板，并做少量修改，以便支持用Azure Mooncake AAD部署ASDK：<br>
 https://github.com/yagmurs/AzureStack-VM-PoC
 
