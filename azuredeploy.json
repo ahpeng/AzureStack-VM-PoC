@@ -148,7 +148,6 @@
             ],
             "properties": {
                 "osProfile": {
-                    "licenseType": "Windows_Server",
                     "computerName": "[parameters('virtualMachineName')]",
                     "adminUsername": "[variables('adminUsername')]",
                     "adminPassword": "[parameters('adminPassword')]",

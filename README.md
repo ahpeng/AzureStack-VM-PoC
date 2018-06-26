@@ -18,8 +18,7 @@ https://github.com/yagmurs/AzureStack-VM-PoC
 
 修改的部分包括：
   - 设置AAD账户为username@tenantname.partner.onmschina.cn格式
-  - 修改Azure Stack的部署脚本参数，以支持AzureChinaCloud
-  - 支持Windows Server的BYOL，以降低运行成本
+  - 修改Azure Stack的部署脚本参数，以支持AzureChinaCloud  
 
 可以参考Yagmurs的博客文章：<br>
 https://blogs.technet.microsoft.com/yagmurs/deploying-azure-stack-development-kit-asdk-straight-on-azure-vm
