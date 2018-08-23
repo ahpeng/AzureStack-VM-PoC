@@ -85,49 +85,13 @@
         },
         "publicDnsName": {
             "type": "string"
-        },
-        "autoShutdownStatus": {
-            "type": "string",
-            "defaultValue": "Disabled",
-            "allowedValues": [
-                "Enabled",
-                "Disabled"
-            ],
-            "metadata": {
-                "name": "Enabled"
-            }
-        },
-        "autoShutdownTime": {
-            "type": "string",
-            "defaultValue": "23:00",
-            "metadata": {
-                "name": "23:00"
-            }
-        },
-        "autoShutdownTimeZone": {
-            "type": "string",
-            "defaultValue": "UTC",
-            "metadata": {
-                "name": "UTC"
-            }
-        },
-        "autoShutdownNotificationStatus": {
-            "type": "string",
-            "defaultValue": "Disabled",
-            "allowedValues": [
-                "Enabled",
-                "Disabled"
-            ],
-            "metadata": {
-                "name": "Disabled"
-            }
         }
     },
     "variables": {
         "vnetId": "[resourceId(resourceGroup().name,'Microsoft.Network/virtualNetworks', parameters('virtualNetworkName'))]",
         "subnetRef": "[concat(variables('vnetID'), '/subnets/', parameters('subnetName'))]",
         "scriptFileName": "post-config.ps1",
-        "scriptPath": "https://github.com/ahpeng/AzureStack-VM-PoC/blob/master/scripts/",
+        "scriptPath": "https://raw.githubusercontent.com/ahpeng/AzureStack-VM-PoC/master/scripts/",
         "fileUri": "[concat(variables('scriptPath'), variables('scriptFileName'))]",
         "adminUsername": "azureuser",
         "osDiskSizeinGB": 256,
@@ -218,28 +182,6 @@
                         }
                     }
                 }
-            ]
-        },
-        {
-            "name": "[concat('shutdown-computevm-', parameters('virtualMachineName'))]",
-            "type": "microsoft.devtestlab/schedules",
-            "apiVersion": "2016-05-15",
-            "location": "[variables('location')]",
-            "properties": {
-                "status": "[parameters('autoShutdownStatus')]",
-                "taskType": "ComputeVmShutdownTask",
-                "dailyRecurrence": {
-                    "time": "[parameters('autoShutdownTime')]"
-                },
-                "timeZoneId": "[parameters('autoShutdownTimeZone')]",
-                "targetResourceId": "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachineName'))]",
-                "notificationSettings": {
-                    "status": "[parameters('autoShutdownNotificationStatus')]",
-                    "timeInMinutes": "30"
-                }
-            },
-            "dependsOn": [
-                "[concat('Microsoft.Compute/virtualMachines/', parameters('virtualMachineName'))]"
             ]
         },
         {
