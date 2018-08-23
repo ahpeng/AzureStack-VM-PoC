@@ -36,9 +36,9 @@ function DownloadWithRetry([string] $Uri, [string] $DownloadLocation, [int] $Ret
 $defaultLocalPath = "C:\AzureStackOnAzureVM"
 New-Item -Path $defaultLocalPath -ItemType Directory -Force
 
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/yagmurs/AzureStack-VM-PoC/master/config.ind" -OutFile "$defaultLocalPath\config.ind"
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/ahpeng/AzureStack-VM-PoC/master/config.ind" -OutFile "$defaultLocalPath\config.ind"
 $gitbranchcode = (Import-Csv -Path $defaultLocalPath\config.ind -Delimiter ",").branch.Trim()
-$gitbranch = "https://raw.githubusercontent.com/yagmurs/AzureStack-VM-PoC/$gitbranchcode"
+$gitbranch = "https://raw.githubusercontent.com/ahpeng/AzureStack-VM-PoC/$gitbranchcode"
 
 DownloadWithRetry -Uri "$gitbranch/scripts/ASDKHelperModule.psm1" -DownloadLocation "$defaultLocalPath\ASDKHelperModule.psm1"
 
