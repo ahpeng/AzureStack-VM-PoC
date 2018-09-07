@@ -18,6 +18,8 @@ https://github.com/yagmurs/AzureStack-VM-PoC
 
 修改的部分包括：
   - 设置AAD账户为username@tenantname.partner.onmschina.cn格式
+  - 持续更新脚本，以支持最新ASDK的下载地址
+  - 删除关机计划，因为mooncake上不支持该功能
   - 修改Azure Stack的部署脚本参数，以支持AzureChinaCloud  
 
 可以参考Yagmurs的博客文章：<br>
